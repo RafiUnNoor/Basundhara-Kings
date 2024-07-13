@@ -1,0 +1,519 @@
+/* Universal Styles */
+html {
+	font-size: 16px;
+	box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans','Helvetica Neue', sans-serif;
+	font-size: inherit;
+    line-height: 1.4;
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+a {
+	text-decoration: none;
+    color: inherit;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+img,
+svg {
+	border-style: none;
+	max-width: 100%;
+	display: block;
+}
+
+/* Header */
+#header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    background-color: #d22525;
+    color: goldenrod;
+}
+
+#header a {
+    color: inherit;
+}
+
+/* Brand */
+#brand {
+    display: inline-block;
+}
+
+#brand img {
+    width: 50px;
+}
+
+#nav-brand {
+	display: none;
+}
+
+#nav-brand img {
+    width: 80px;
+}
+
+@media (min-width: 768px) {
+    #brand {
+        display: none;
+    }
+
+    #nav-brand {
+        display: inline;
+        margin: 0 20px;
+        padding: 0;
+    }
+}
+
+/* Toggle Icon */
+#toggle {
+    margin-right: auto;
+    width: 20px;
+}
+
+@media (min-width: 768px) {
+    #toggle {
+        display: none;
+    }
+}
+
+/* Search Icon */
+#search {
+    margin-left: auto;
+    width: 20px;
+}
+
+@media (min-width: 768px) {
+    #search {
+        display: none;
+    }
+}
+
+/* Main Navigation */
+#main-nav {
+	display: none;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#main-nav li:not(#nav-brand) a {
+	padding: 12px 20px;
+    display: block;
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+
+#main-nav li:not(#nav-brand) a:hover {
+    background: rgba(0, 0, 0, .5);
+}
+
+@media (min-width: 768px) {
+    #main-nav {
+        display: block !important;
+        margin-top: 0;
+    }
+
+    #main-nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+
+    #main-nav li:not(#nav-brand) a {
+        padding: 8px 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    #main-nav li:not(#nav-brand) a {
+        padding: 8px 15px;
+    }
+}
+
+/* Banner */
+#banner {
+    background-color: #111;
+}
+#banner img {
+    width: 100%;
+}
+
+
+/* Next Match */
+#next-match {
+    padding: 30px 0;
+    background-color: #d22525;
+    color: goldenrod;
+    text-align: center;
+}
+
+/* Next Match Header */
+.match-header,
+.match-header p {
+    margin-bottom: 30px;
+}
+
+.match-header h2 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* Next Match Details */
+@media (min-width: 768px) {
+    .match-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Club Section */
+
+.club-section {
+    
+    background-color: #d22525;
+    color: goldenrod;
+    text-align: center;
+}
+.club-header,
+.club-header p {
+    margin-bottom: 30px;
+    margin: 2em;
+}
+.club-header h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#club .swiper {
+    width: 50%;
+    height: 100%;
+    border-radius: 30px;
+  }
+  .swiper-button-prev , .swiper-button-next{
+    color: #777;
+  }
+ 
+@media (min-width: 1200px) {
+    .club-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* Next Match Countdown */
+.match-countdown {
+    display: inline-flex;
+    margin: 20px auto 10px;
+}
+
+.match-countdown > div:not(:last-child, :first-child) p::after,
+.match-countdown > div:not(:last-child, :first-child) p::before {
+    content: ":";
+    margin: 0 20px;
+}
+
+.match-countdown p {
+    font-size: 2rem;
+    margin-bottom: .3rem;
+}
+
+.match-countdown span {
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .match-countdown {
+        margin: 0 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .match-countdown {
+        margin: 0;
+    }
+}
+
+/* Next Match Teams */
+.home-team h3,
+.away-team h3 {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.home-team img,
+.away-team img {
+    height: 80px;
+    margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+    .home-team img,
+    .away-team img {
+        margin: 0 auto 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .home-team,
+    .away-team {
+        display: inherit;
+        align-items: inherit;
+    }
+
+    .home-team img,
+    .away-team img {
+        margin: 0 40px;
+    }
+
+    .home-team img {
+        order: 2;
+    }
+}
+
+/* Sections */
+[class$="-section"] {
+	padding: 30px 0 10px;
+}
+
+@media (min-width: 768px) {
+	[class$="-section"] {
+		padding: 50px 0 30px;
+	}
+}
+
+/* Section Header */
+.section-header {
+	margin-bottom: 2.2rem;
+}
+
+.section-header::after {
+	content: " ";
+	display: block;
+	width: 40px;
+    border-bottom: 4px solid #D2232A;
+}
+
+.section-header h2 {
+    font-size: 1.6rem;
+    /* font-weight: 400; */
+    text-transform: uppercase;
+	margin-bottom: .8rem;
+}
+
+/* News Section */
+
+/* News Box */
+.news-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+.news-box img {
+    width: 100%;
+}
+.news-box .news-title {
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+}
+.news-box h3 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+.news-box p {
+    text-transform: uppercase;
+}
+/* Players Card */
+.player-card {
+    position: relative;
+    margin-bottom: 30px;
+}
+.player-card img {
+    width: 100%;
+    border-radius: 20px;
+}
+.player-card .player-title {
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .4);
+    color: goldenrod;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.player-card h3 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+.player-card p {
+    text-transform: uppercase;
+}
+
+/* product card section */
+.product-item {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.product-item img{
+    width: 100%;
+}
+.product_name{
+    font-size: 1.8rem;
+    position: absolute;
+    bottom: 70px;
+    color: goldenrod;
+}
+.price{
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 20px;
+    color: red;
+}
+.cart-action{
+    width: 100%;
+    height: 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gainsboro;
+    color: goldenrod;
+}
+.add-to-cart , .product-quantity{
+    margin: 1.3em;
+}
+.add-to-cart {
+    background-color: #d22525;
+    color: white;
+    padding: .7em;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Cart modal section */
+
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .cart-modal.open {
+    display: block;
+  }
+  
+  .cart-content {
+    padding: 20px;
+  }
+  
+  #closeCartBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #888;
+  }
+/* up button section */
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  #myBtn img{
+
+    width: 10%;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; } /* Add a dark-grey background on hover */
+
+/* Footer */
+footer {
+	padding: 30px 0;
+	background-color: #111;
+	color: #777;
+	text-align: center;
+}
+
+footer p {
+	margin-bottom: 0;
+}
