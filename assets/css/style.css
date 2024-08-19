@@ -405,82 +405,114 @@ svg {
 }
 
 /* product card section */
+#shop{
+    margin-top: 3vh;
+}
+#product-item-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vh    ;
+}
+
 .product-item {
-    position: relative;
-    margin-bottom: 30px;
+    width: 22vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #555;
+    border-radius: 20px;
+    padding: 0;
+    padding-top: 1vw;
 }
 .product-item img{
-    width: 100%;
+    width: 90%;
+    border-radius: 30px;
 }
-.product_name{
-    font-size: 1.8rem;
-    position: absolute;
-    bottom: 70px;
+.product-item .card-title{
+    font-weight: 400;
+    font-size: 1.5vw;
     color: goldenrod;
 }
-.price{
-    font-size: 1.4rem;
-    position: absolute;
-    bottom: 20px;
-    color: red;
-}
-.cart-action{
-    width: 100%;
-    height: 4em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: gainsboro;
+.product-item .card-text{
+    font-weight: 400;
+    font-size: 1vw;
     color: goldenrod;
 }
-.add-to-cart , .product-quantity{
-    margin: 1.3em;
+.product-item .cart-action{
+ width:100% ;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #777;
+ padding: 1vw;
+ border-bottom-left-radius: 20px;
+ border-bottom-right-radius: 20px;
 }
-.add-to-cart {
-    background-color: #d22525;
-    color: white;
-    padding: .7em;
+.product-item .product-quantity{
+    width: 3vw;
+}
+.product-item .add-to-cart{
+    background-color: #D2232A;
     border-radius: 10px;
-    font-weight: bold;
+    padding: 1vw;
+    color: goldenrod;
 }
+
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    display: none;
+}
+
 
 /* Cart modal section */
-
-.cart-modal {
-    display: none;
+/* CSS for the cart modal */
+.cart-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 100%;
     height: 100%;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
     z-index: 1000;
-    overflow-y: auto;
-  }
-  
-  .cart-modal.open {
-    display: block;
-  }
-  
-  .cart-content {
+}
+
+.cart-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-color: red;
+    color: white;
     padding: 20px;
-  }
-  
-  #closeCartBtn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    background: none;
-    color: #888;
-  }
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    display: none;
+    overflow-y: auto;
+}
+
+.cart-modal .close-btn, .cart-modal .checkout-btn {
+    margin-top: 20px;
+}
+
+.cart-modal .cart-item {
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+}
+
+.cart-modal .cart-item-name {
+    font-weight: bold;
+}
 /* up button section */
 
 #myBtn {
