@@ -143,12 +143,23 @@ svg {
 #main-nav li:not(#nav-brand) a {
 	padding: 12px 20px;
     display: block;
-    font-size: .9rem;
+    font-size: 1.2rem;
+    font-weight: 400;
     text-transform: uppercase;
 }
 
 #main-nav li:not(#nav-brand) a:hover {
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .1);
+    border-radius: 15px;
+    color: white;
+}
+
+#openCartModal i{
+    font-size: 20px;
+}
+#openCartModal span{
+    font-size: 15px;
+    
 }
 
 @media (min-width: 768px) {
@@ -246,6 +257,17 @@ svg {
         justify-content: center;
         align-items: center;
     }
+}
+@media (max-width: 768px) {
+    #club .swiper {
+        width: 90%;
+        height: 100%;
+        border-radius: 5px;
+      }
+      .club-header{
+        width: 100vw;
+        margin: 0;
+      }
 }
 
 
@@ -413,7 +435,7 @@ svg {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 2vh    ;
+    gap: 2vh;
 }
 
 .product-item {
@@ -472,6 +494,26 @@ svg {
     display: none;
 }
 
+@media (max-width: 768px) {
+	.product-item{
+        width: 90vw;
+    }
+    .product-item .card-title{  
+        font-size: 25px;  
+    }
+    .product-item .card-text{
+        font-size: 20px;
+    }
+    .product-item .cart-action input , .product-item .cart-action a {
+        margin: 3vw;
+        margin-bottom: 1vh;      
+        margin-top: 1vh;      
+    }
+    .product-item .product-quantity{
+        width: 10vw;
+    }
+}
+
 
 /* Cart modal section */
 /* CSS for the cart modal */
@@ -512,6 +554,11 @@ svg {
 
 .cart-modal .cart-item-name {
     font-weight: bold;
+}
+@media(max-width:425px){
+    .cart-modal {
+        width: 70vw;
+    }
 }
 /* up button section */
 

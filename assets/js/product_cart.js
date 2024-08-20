@@ -63,7 +63,7 @@ function updateCartModal() {
             '<button class="btn btn-sm btn-secondary value-decrease" data-name="' + item.name + '" data-price="' + item.price + '">-</button>' +
             '<span class="cart-item-value">' + itemValue.toFixed(2) + '</span>' + // Display the item value
             '<button class="btn btn-sm btn-secondary value-increase" data-name="' + item.name + '" data-price="' + item.price + '">+</button>' +
-            '<button class="btn btn-sm btn-danger delete-item" data-name="' + item.name + '">Delete</button>' + // Add Delete button
+            '<button class="btn btn-sm btn-danger delete-item" data-name="' + item.name + '"><i class="ri-delete-bin-3-line"></i></button>' + // Add Delete button
             '</div>' +
             '<div class="cart-item-price">' + item.price + ' x ' + item.quantity + '</div>' +
             '</div>';
