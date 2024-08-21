@@ -399,6 +399,26 @@ svg {
 .news-box p {
     text-transform: uppercase;
 }
+@media (max-width: 768px) {
+    #news{
+        display: none;
+    }
+    .news-box{
+        width: 90vw;
+    }
+    .news-box .news-title{
+        width: 89%;
+    }
+    #news-mobile .row .swiper .swiper-wrapper{
+        gap: 4vw;
+    }
+    
+}
+@media (min-width: 770px) {
+    #news-mobile{
+        display: none;
+    }
+}
 /* Players Card */
 .player-card {
     position: relative;
@@ -424,6 +444,16 @@ svg {
 }
 .player-card p {
     text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    #team{
+        display: none;
+    } 
+}
+@media (min-width: 770px) {
+    #team-mobile{
+        display: none;
+    }
 }
 
 /* product card section */
@@ -587,7 +617,8 @@ svg {
 
 /* Footer */
 footer {
-	padding: 30px 0;
+    margin-top: 2vh;
+	padding: 20px 0;
 	background-color: #111;
 	color: #777;
 	text-align: center;
@@ -595,4 +626,24 @@ footer {
 
 footer p {
 	margin-bottom: 0;
+}
+footer .container-full{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+footer .container-full img{
+    width: 10%;
+}
+footer .container-full ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50vw;
+    margin-left: -9vw;
+}
+footer .container-full ul li{
+    list-style: none;
 }
