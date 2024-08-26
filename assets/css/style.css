@@ -409,10 +409,7 @@ svg {
     .news-box .news-title{
         width: 89%;
     }
-    #news-mobile .row .swiper .swiper-wrapper{
-        gap: 4vw;
-    }
-    
+  
 }
 @media (min-width: 770px) {
     #news-mobile{
@@ -449,6 +446,9 @@ svg {
     #team{
         display: none;
     } 
+    .player-card .player-title {
+        width: 90%;
+    }
 }
 @media (min-width: 770px) {
     #team-mobile{
@@ -541,6 +541,25 @@ svg {
     }
     .product-item .product-quantity{
         width: 10vw;
+        border-radius: 15px;
+    }
+}
+@media (max-width: 425px){
+    .product-item{
+        width: 40vw;
+    }
+    .product-item .card-title{  
+        font-size: 18px;  
+    }
+    .product-item .card-text{
+        font-size: 13px;
+    }
+    .cart-action a{
+        font-size: 12px;
+    }
+    .product-item .product-quantity{
+        width: 5.5vw;
+        border-radius: 15px;
     }
 }
 
@@ -584,6 +603,17 @@ svg {
 
 .cart-modal .cart-item-name {
     font-weight: bold;
+}
+.cart-item-quantity{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+}
+@media(max-width:768px){
+    .cart-modal {
+        width: 50vw;
+    }
 }
 @media(max-width:425px){
     .cart-modal {
