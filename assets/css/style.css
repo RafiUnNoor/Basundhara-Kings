@@ -460,16 +460,21 @@ svg {
 #shop{
     margin-top: 3vh;
 }
+.shop_section{
+    width: 85vw;
+    margin-left: 7vw;
+}
 #product-item-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 2vh;
+    
 }
 
 .product-item {
-    width: 22vw;
+    width: 21vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
